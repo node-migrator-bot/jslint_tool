@@ -7,7 +7,7 @@ var config = require('./config.json');
 
 // merge `process.cwd()/jslint_config.json`
 var configPath = path.join(process.cwd(), 'jslint_config.json');
-if (path.existsSync(configPath)) {
+if (fs.existsSync(configPath)) {
   var customConfig = require(configPath);
   var k;
   for (k in customConfig) {
